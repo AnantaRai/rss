@@ -15,13 +15,13 @@ class GuardianApiService
 
     public function fetchArticlesBySection($section)
     {
-        $response = $this->client->request('GET', 'https://content.guardianapis.com/sections', [
+        $response = $this->client->request('GET', 'https://content.guardianapis.com/search', [
             'query' => [
                 'q' => $section,
                 'api-key' => env('GUARDIAN_API_KEY'),   
             ]
         ]); 
-        
+
     
         return json_decode($response->getBody(), true);
     }
