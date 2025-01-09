@@ -11,7 +11,6 @@
             <item>
                 <title>{{ htmlspecialchars($article['webTitle']) }}</title>
                 <link>{{ htmlspecialchars($article['webUrl']) }}</link>
-                <description><![CDATA[{{ $article['fields']['trailText'] ?? '' }}]]></description>
                 <pubDate>{{ date('r', strtotime($article['webPublicationDate'])) }}</pubDate>
                 <guid>{{ htmlspecialchars($article['id']) }}</guid>
             </item>
